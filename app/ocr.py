@@ -45,6 +45,7 @@ def get_ocr_result():
             file_hash_code = get_md5_hash(file_data)
             # search the same code in the database and find the result if needed
             save_file_path = './media_dir' + '/' + file_hash_code + '.' + file_format
+            # save imgage file to media_dir
             with open(save_file_path, 'wb') as f:
                 f.write(file_data)
             upload_time = datetime.datetime.now()

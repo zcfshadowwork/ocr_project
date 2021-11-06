@@ -18,6 +18,6 @@ RUN pip install --upgrade pip -i https://mirrors.aliyun.com/pypi/simple && \
     opencv-python \
     pytesseract -i https://mirrors.aliyun.com/pypi/simple  && \
     pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple
-ENTRYPOINT ["/usr/bin/tail", "-f", "/dev/null"]
+# ENTRYPOINT ["/usr/bin/tail", "-f", "/dev/null"]
 # ENTRYPOINT ["python3", "run.py"]
-# CMD ["gunicorn", "run:app", "-c", "./gunicorn.conf.py"]
+CMD ["gunicorn", "run:app", "-c", "./gunicorn.conf.py"]
