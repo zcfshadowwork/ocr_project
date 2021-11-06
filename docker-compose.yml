@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  app:
+    container_name: flask_app
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: flask:basic
+    links:
+      - db
+    ports:
+      - "9014:5000"
+    restart: always
+  db:
+    container_name: flask_mysql
+    image: mysql:5.7
+    ports:
+      - "9015:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/:ro
+    restart: always
