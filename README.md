@@ -1,2 +1,5 @@
 # ocr_project
-flask web service for alphabet orc.
+Flask web service for alphabet orc.
+
+
+## Overview

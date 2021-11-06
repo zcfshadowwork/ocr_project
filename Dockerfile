@@ -12,7 +12,7 @@ COPY app app/
 COPY media_dir media_dir/
 COPY *.py /code/
 COPY requirements.txt /code/
-RUN pip install --upgrade pip -i https://mirrors.aliyun.com/pypi/simple; \
+RUN pip install --upgrade pip -i https://mirrors.aliyun.com/pypi/simple && \
     pip install \
     pillow  \
     opencv-python \

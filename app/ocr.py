@@ -8,7 +8,6 @@ import numpy as np
 import pytesseract
 import string
 
-from flask import current_app
 from flask import Blueprint
 from flask import jsonify
 from flask import request
@@ -34,6 +33,7 @@ def get_ocr_result():
         content = []
         if file_data:
             file_hash_code = get_md5_hash(file_data)
+            # search the same code in the database and find the result if needed
             new_file_path = './media_dir' + '/' + file_hash_code + '.' + file_type
             with open(new_file_path, 'wb') as f:
                 f.write(file_data)
