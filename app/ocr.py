@@ -37,7 +37,7 @@ def get_ocr_result():
         logger.info("{} ocr start!".format(file_name))
         # check if image format is jpg or png
         if file_format.lower() not in ('jpg', 'png'):
-            logger.error("file_name: {} wrong imgage format".format(file_name))
+            logger.error("file_name: {} wrong image format".format(file_name))
             abort(404, description="Please check the file format")
         file_data = upload_img.read()
         content = []

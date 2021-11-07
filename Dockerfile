@@ -19,5 +19,5 @@ RUN pip install --upgrade pip -i https://mirrors.aliyun.com/pypi/simple && \
     pytesseract -i https://mirrors.aliyun.com/pypi/simple  && \
     pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple
 # ENTRYPOINT ["/usr/bin/tail", "-f", "/dev/null"]
-# ENTRYPOINT ["python3", "run.py"]
+# CMD ["python3", "run.py"]
 CMD ["gunicorn", "run:app", "-c", "./gunicorn.conf.py"]
