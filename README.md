@@ -78,7 +78,7 @@ $ python3 create_db.py
 
 `views.py` register orc as buleprint
 
-## How to test
+## How to test or use
 
 You can use the testing script `test.py` in `test` directory
 
@@ -87,4 +87,8 @@ $ python test.py
 ```
 then the images in this directory will send to the flask_app service and return the ocr result
 
-You can also use Postman to test this service, post a 'jpg' or 'png' image to url 'http://127.0.0.1:5000/ocr/get_ocr_result/'
+You can also use curl or Postman to test this service, post a 'jpg' or 'png' image to url 'http://127.0.0.1:9014/ocr/get_ocr_result/'
+
+```
+$ curl http://127.0.0.1:9014/ocr/get_ocr_result/ -F "file=@file_path"
+```
