@@ -9,8 +9,11 @@ services:
     image: flask:basic
     links:
       - db
+    volumes:
+      - ".:/code"
     ports:
       - "9014:5000"
+    command: ["gunicorn", "run:app", "-c", "./gunicorn.conf.py"]
     restart: always
   db:
     container_name: flask_mysql
