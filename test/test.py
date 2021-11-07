@@ -4,7 +4,7 @@ import requests
 
 def test_get_ocr_result():
     test_url = 'http://127.0.0.1:9014/ocr/get_ocr_result/'
-    test_image_list = ['1.png', '2.png', '3.jpg', '4.png', '5.png', '6.jpg', '7.jpg']
+    test_image_list = ['1.png', '2.png', '3.jpg', '4.png', '5.png', '6.jpg', '7.jpg', '8.png']
     for image_name in test_image_list:
         files = {'file': open(image_name, 'rb')}
         res = requests.post(test_url, files=files)
@@ -28,4 +28,6 @@ if __name__ == '__main__':
     6.jpg {"content":[]}
     
     7.jpg {"content":["B","R","E","A","K","I","N","G","T","H","E","S","T","A","T","U","E","i","h","a","v","e","a","l","w","a","y","s","k","n","o","w","n","i","j","u","s","t","d","i","d","n","t","u","n","d","e","r","s","t","a","n","d","t","h","e","i","n","n","e","r","c","o","n","f","l","i","c","t","i","o","n","s","a","r","r","e","s","t","i","n","g","o","u","r","h","a","n","d","s","g","r","a","v","i","t","a","t","i","n","g","c","l","o","s","e","e","n","o","u","g","h","e","x","p","a","n","s","i","v","e","d","i","s","t","a","m","c","e","b","e","t","w","e","e","n","c","o","u","l","d","n","t","g","i","v","e","y","o","u","m","o","r","e","b","u","t","m","e","a","n","t","e","v","e","r","y","t","h","i","n","g","w","h","e","n","t","h","e","d","a","y","c","o","m","e","s","y","o","u","f","i","n","d","y","o","u","r","h","e","a","r","t","w","a","n","t","s","s","o","m","e","t","h","i","n","g","m","o","r","e","t","h","a","n","a","v","i","e","c","e","a","n","d","a","p","a","r","t","y","o","u","r","l","i","f","e","w","i","l","l","c","h","a","n","g","e","l","i","k","e","a","s","t","a","t","u","e","s","e","t","f","r","e","e","t","o","w","a","l","k","a","m","o","n","g","u","s","t","o","c","r","e","a","t","e","d","e","s","t","i","n","y","w","e","d","i","d","n","t","b","r","e","a","k","a","n","y","r","u","l","e","s","w","e","d","i","d","n","t","m","a","k","e","m","i","s","t","a","k","e","s","m","a","k","i","n","g","b","e","a","u","t","y","i","n","l","o","v","i","n","g","m","a","k","i","n","g","l","o","v","i","n","e","f","o","r","d","a","y","s","S","H","I","L","O","W"]}
+    
+    8.png ["r","h","y","x","C","h","i","n","e","s","e","A","E","D","E","E","S","O","E","O","I","S","A","U","C","E","S","i","p","u","m","e","e","e","A","t","t","t","o","r","t","e"]}
     """
